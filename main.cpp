@@ -18,6 +18,11 @@ int main()
 {
 	try
 	{
+		sql::Driver* MyDriver; //workbench
+		sql::Connection* MyConnection; //접속 정보
+
+		MyDriver = get_driver_instance();
+		MyConnection = MyDriver->connect("tcp://127.0.0.1", "junios", "qweasd123");
 
 	}
 	catch (sql::SQLException Exception)
